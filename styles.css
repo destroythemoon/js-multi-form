@@ -1,0 +1,122 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+input {
+  border: white;
+  height: 30px;
+  text-align: center; 
+}
+
+.multi-step-form {
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  overflow: hidden;
+
+  height: 100%;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: .5rem;
+  color: #000;
+  padding: 30px;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  animation: fade 250ms ease-in-out forwards;
+}
+
+.card.active {
+  animation: slide 250ms 125ms ease-in-out both;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  margin-bottom: .5rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group > label {
+  font-weight: bold;
+  font-style: .8em;
+  color: #333;
+}
+
+.form-group > input {
+  border: 1px solid #333;
+  border-radius: .25em;
+  font-style: 1rem;
+  padding: .25em;
+}
+
+.step-title {
+  margin: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  background-color: rgb(127, 204, 127);
+  border: none;
+  color: white;
+  outline: none;
+  transition: 200ms;
+}
+
+button:hover {
+  background-color: rgb(73, 146, 73);
+}
+
+button:focus {
+  background-color: rgb(48, 99, 48);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(.75);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.hide {
+  display: none;
+}
